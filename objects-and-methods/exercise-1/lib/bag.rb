@@ -1,27 +1,19 @@
 class Bag
-  attr_reader :candies
+    attr_reader :candies
 
   def initialize
-    @bag = []
+    @candies = []
   end
 
   def empty?
-    if @bag == []
-      true
-    else
-      false
-    end
+    candies.empty?
   end
 
   def count
-    @bag.count
+    @candies.count
   end
 
-  # def candies
-  #   @bag
-  # end
-
   def <<(things)
-    require "pry";binding.pry
+    @candies << things
   end
 end

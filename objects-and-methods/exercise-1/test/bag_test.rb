@@ -18,15 +18,13 @@ class BagTest < Minitest::Test
   end
 
   def test_put_candy_in_the_bag
-    # skip
     bag = Bag.new
     candy = Candy.new("Sour frogs")
     bag << candy
     assert_equal [candy], bag.candies
   end
 
-  def test_a_bag_with_candies_is_not_empty
-    skip
+  def test_a_bag_with_candies_is_not_empty 
     bag = Bag.new
     bag << Candy.new("Nerds")
     refute bag.empty?
