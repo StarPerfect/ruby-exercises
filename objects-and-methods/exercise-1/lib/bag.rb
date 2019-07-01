@@ -16,4 +16,9 @@ class Bag
   def <<(things)
     @candies << things
   end
+
+  def contains?(candy)
+    candy_types = candies.map{|candy| candy.type}
+    candy_types.include?(candy)
+  end
 end
